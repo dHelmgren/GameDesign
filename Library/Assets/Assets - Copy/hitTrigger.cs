@@ -10,16 +10,21 @@ public class hitTrigger : MonoBehaviour
 	{
 
 		if (other.tag == "Player") {
-				} 
-			else if (other.tag == "pickUp")
-			{
-			Destroy(other.gameObject);
-			}
+				} else if (other.tag == "pickUp") {
+						Destroy (other.gameObject);
+				} else if (other.tag == "deathWall") {
+					Destroy(GameObject.Find ("Ball1"));
+					Destroy(GameObject.Find ("ball2"));
+					Destroy(GameObject.Find ("Tether"));
+
+				}
 		else {
-				Destroy (other.gameObject);
-				Destroy(GameObject.Find ("Ball1"));
-				Destroy(GameObject.Find ("ball2"));
-				Destroy (GameObject.Find ("Tether"));
+			GameObject.Find ("Ball1").GetComponent<Rotations>().clockWise =!(GameObject.Find ("Ball1").GetComponent<Rotations>().clockWise);
+			GameObject.Find ("ball2").GetComponent<Rotations>().clockWise =!(GameObject.Find ("ball2").GetComponent<Rotations>().clockWise);
+			GameObject.Find ("Tether").GetComponent<Rotations>().clockWise =!(GameObject.Find ("Tether").GetComponent<Rotations>().clockWise);
+
+
+				
 			//Debug.Log ("hey");
 			//GameObject.Find ("Ball1").rigidbody.velocity =  new Vector3 (pushSpeed, 0.0f, 0.0f);
 			//GameObject.Find ("ball2").rigidbody.velocity =  new Vector3 (pushSpeed, 0.0f, 0.0f);
