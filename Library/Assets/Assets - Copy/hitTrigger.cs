@@ -13,9 +13,11 @@ public class hitTrigger : MonoBehaviour
 				} 
 			else if (other.tag == "pickUp")
 			{
-			Destroy(other.gameObject);
+				GameController.pickUpScoreAddtion += 150;
+				Destroy(other.gameObject);
 			}
 		else {
+				GameController.gameOver = true;
 				Destroy (other.gameObject);
 				Destroy(GameObject.Find ("Ball1"));
 				Destroy(GameObject.Find ("ball2"));
