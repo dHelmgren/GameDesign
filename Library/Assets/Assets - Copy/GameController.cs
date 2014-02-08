@@ -12,6 +12,9 @@ public class GameController : MonoBehaviour {
 	public Vector3 spawnValuesPick;
 	public static float timer;
 	public static bool timeStarted = false;
+	public float speedIncriment = -.1f;
+	public static int count = 0; 
+
 	//This is the offset for the score. How many points
 	//per second
 	public int scoreOffSet;
@@ -33,7 +36,15 @@ public class GameController : MonoBehaviour {
 				}
 		if (timeStarted == true) {
 			timer = timer + Time.deltaTime;
+			}
+		  
+
+		  if (count % 100 == 0) {
+			WallMovement.wallSpeed -= Mathf.Log ((count+.5f)/50000.0f, 2.7182818284f)+8.0f;
 				}
+		count++;
+
+
 	}
 
 	void OnGUI(){
@@ -49,6 +60,7 @@ public class GameController : MonoBehaviour {
 		string displayScore = string.Format ("{0:0}:{1: 000000}", "Score", score);
 
 		GUI.Label (new Rect (10, 10, 250, 100), displayScore);
+
 
 		}
 

@@ -8,9 +8,11 @@ public class hitTrigger : MonoBehaviour
 
 	void OnTriggerEnter(Collider other)
 	{
-
+		Debug.Log (other);
 		if (other.tag == "Player") {
 				} else if (other.tag == "pickUp") {
+						WallMovement.wallSpeed = -3.0f;
+						GameController.count = 0;
 						Destroy (other.gameObject);
 				} else if (other.tag == "deathWall") {
 					Destroy(GameObject.Find ("Ball1"));
