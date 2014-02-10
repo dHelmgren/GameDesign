@@ -55,6 +55,7 @@
      <Compile Include="Assets\MainMenu.cs" />
      <Compile Include="Assets\Rotation.cs" />
      <Compile Include="Assets\Rotation2.cs" />
+     <Compile Include="Assets\RotationsDemo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
