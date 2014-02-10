@@ -1,9 +1,21 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+<<<<<<< HEAD
   <MonoDevelop.Ide.Workbench ActiveDocument="AssetS\Assets - Copy\GameController.cs">
     <Files>
       <File FileName="AssetS\Assets - Copy\GameController.cs" Line="68" Column="75" />
       <File FileName="AssetS\Assets - Copy\hitTrigger.cs" Line="8" Column="2" />
+=======
+  <MonoDevelop.Ide.Workbench ActiveDocument="Temp\Compiled-Illumin-Diffuse.shader">
+    <Files>
+<<<<<<< HEAD
+      <File FileName="AssetS\Assets - Copy\WallMovement.cs" Line="24" Column="1" />
+      <File FileName="AssetS\Assets - Copy\hitTrigger.cs" Line="1" Column="1" />
+=======
+      <File FileName="AssetS\Assets - Copy\hitTrigger.cs" Line="1" Column="1" />
+      <File FileName="Temp\Compiled-Illumin-Diffuse.shader" Line="1" Column="1" />
+>>>>>>> d5d0ee4bece58ee53695edfd254e0ca5e5785f05
+>>>>>>> 0598faa9102d6816e4949f764a0ce217ebb94f73
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
