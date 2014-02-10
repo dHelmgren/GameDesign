@@ -12,13 +12,11 @@ public class GameController : MonoBehaviour {
 	public Vector3 spawnValuesPick;
 	public static float timer;
 	public static bool timeStarted = false;
-<<<<<<< HEAD
+
 	public static bool gameOver = false;
-=======
 	public float speedIncriment = -.1f;
 	public static int count = 0; 
 
->>>>>>> 0598faa9102d6816e4949f764a0ce217ebb94f73
 	//This is the offset for the score. How many points
 	//per second
 	public int scoreOffSet;
@@ -98,21 +96,31 @@ public class GameController : MonoBehaviour {
 		yield return new WaitForSeconds(spawnWait);
 		while(true)
 		{
-			for (int i = 0;i< hazardCount;i++) 
+			for (int i = 0;i< hazardCount;i++)
 			{	
-				Vector3 spawnPosition = new Vector3 (spawnValues.x, spawnValues.y, Random.Range (-spawnValues.z, spawnValues.z));
-				Quaternion spawnRotation = new Quaternion ();
-				Instantiate (hazard, spawnPosition, spawnRotation);
+				//Set the hazard between set spawnValues -z and z, where z is the width of the stage
+				/*Vector3 spawnPosition = new Vector3 (spawnValues.x, spawnValues.y, Random.Range (-spawnValues.z, spawnValues.z));
+Quaternion spawnRotation = new Quaternion ();
+Instantiate (hazard, spawnPosition, spawnRotation);*/
+				//int negWall = Random.Range(0,10);
+				for(int j = 0; j <= 3; j += 1)
+				{
+					spawnWall (Random.Range (0,10)*5 - 25);
+				}
 				yield return new WaitForSeconds(spawnWait);
 				if(i%2 == 0)
 				{
-
 					Vector3 spawnPositionPick = new Vector3 (spawnValuesPick.x, spawnValuesPick.y, Random.Range (-spawnValuesPick.z, spawnValuesPick.z));
 					Quaternion spawnRotationPick = new Quaternion ();
-					Instantiate (pickups, spawnPositionPick, spawnRotation);
+					Instantiate (pickups, spawnPositionPick, spawnRotationPick);
 				}
 				yield return new WaitForSeconds(spawnWait);
-	    	}
-		}
+			}//for
+		}//while
+	}
+	void spawnWall(float zLoc){
+		Vector3 spawnPosition = new Vector3 (spawnValues.x, spawnValues.y, zLoc);
+		Quaternion spawnRotation = new Quaternion ();
+		Instantiate (hazard, spawnPosition, spawnRotation);
 	}
 }

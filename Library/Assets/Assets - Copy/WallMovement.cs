@@ -2,13 +2,8 @@
 using System.Collections;
 
 public class WallMovement : MonoBehaviour {
-<<<<<<< HEAD
-	public float wallSpeed = -6.0f;
-	public float tumble;
-=======
 	public static float wallSpeed = -6.0f;
-
->>>>>>> 0598faa9102d6816e4949f764a0ce217ebb94f73
+	public float tumble;
 	// Use this for initialization
 	void Start () {
 	
