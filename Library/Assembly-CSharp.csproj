@@ -56,6 +56,7 @@
      <Compile Include="Assets\Rotation.cs" />
      <Compile Include="Assets\Rotation2.cs" />
      <Compile Include="Assets\RotationsDemo.cs" />
+     <Compile Include="Assets\ScoreController.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">

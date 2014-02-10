@@ -56,6 +56,7 @@
      <Compile Include="Assets\Rotation.cs" />
      <Compile Include="Assets\Rotation2.cs" />
      <Compile Include="Assets\RotationsDemo.cs" />
+     <Compile Include="Assets\ScoreController.cs" />
  <Reference Include="Assembly-UnityScript-firstpass">
  <HintPath>Library\ScriptAssemblies\Assembly-UnityScript-firstpass.dll</HintPath>
  </Reference>

@@ -1,10 +1,11 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\MainMenu.cs">
     <Files>
-      <File FileName="AssetS\Assets - Copy\GameController.cs" Line="1" Column="1" />
+      <File FileName="AssetS\Assets - Copy\GameController.cs" Line="16" Column="30" />
       <File FileName="AssetS\Assets - Copy\hitTrigger.cs" Line="1" Column="1" />
-      <File FileName="Assets\MainMenu.cs" Line="1" Column="1" />
+      <File FileName="Assets\MainMenu.cs" Line="27" Column="36" />
+      <File FileName="Assets\ScoreController.cs" Line="13" Column="37" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

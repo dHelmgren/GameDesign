@@ -13,16 +13,24 @@ public class GameController : MonoBehaviour {
 	public static float timer;
 	public static bool timeStarted = false;
 	public static bool gameOver = false;
+	public static bool isNuxMode;
 	//This is the offset for the score. How many points
 	//per second
 	public int scoreOffSet;
 	public static int pickUpScoreAddtion = 0;
 	public bool finalScoreSet = false;
-	public int finalScore = 0;
+	public static int finalScore = 0;
+
 
 	void Start()
 	{
 		//Start the timer
+		timeStarted = false;
+		timer = 0;
+		pickUpScoreAddtion = 0;
+		finalScore = 0;
+		finalScoreSet = false;
+		gameOver = false;
 		timeStarted = true;
 		StartCoroutine (SpawnWaves ());
 	}
@@ -68,10 +76,8 @@ public class GameController : MonoBehaviour {
 				score = Mathf.RoundToInt ((timer * scoreOffSet) + pickUpScoreAddtion);
 				finalScore = score;
 				finalScoreSet = true;
+				Application.LoadLevel("GameOver");
 			}
-			string displayScore = string.Format ("{0:0}:{1: 0}", "Final Score", finalScore);
-			GUI.Label(new Rect(300,300,250,500), "Game Over!!");
-			GUI.Label(new Rect(300,350,250,500), displayScore);
 
 		}
 
