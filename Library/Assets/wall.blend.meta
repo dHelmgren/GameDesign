@@ -2,7 +2,51 @@ fileFormatVersion: 2
 guid: 2a33c07756c7d9a4ea85b646c1bf1107
 ModelImporter:
   serializedVersion: 16
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    100000: Frame
+    100002: Frame_001
+    100004: Frame_002
+    100006: Glowybit
+    100008: Glowybit_001
+    100010: Glowybit_002
+    100012: Plane
+    100014: Plane_001
+    100016: //RootNode
+    400000: Frame
+    400002: Frame_001
+    400004: Frame_002
+    400006: Glowybit
+    400008: Glowybit_001
+    400010: Glowybit_002
+    400012: Plane
+    400014: Plane_001
+    400016: //RootNode
+    2300000: Frame
+    2300002: Frame_001
+    2300004: Frame_002
+    2300006: Glowybit
+    2300008: Glowybit_001
+    2300010: Glowybit_002
+    2300012: Plane
+    2300014: Plane_001
+    3300000: Frame
+    3300002: Frame_001
+    3300004: Frame_002
+    3300006: Glowybit
+    3300008: Glowybit_001
+    3300010: Glowybit_002
+    3300012: Plane
+    3300014: Plane_001
+    4300000: Frame_002
+    4300002: Glowybit_002
+    4300004: Frame_001
+    4300006: Glowybit_001
+    4300008: Plane_001
+    4300010: Plane
+    4300012: Frame
+    4300014: Glowybit
+    7400000: Default Take
+    9500000: //RootNode
   materials:
     importMaterials: 1
     materialName: 0

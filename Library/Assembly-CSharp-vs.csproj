@@ -51,7 +51,7 @@
      <Compile Include="Assets\Assets - Copy\Rotations.cs" />
      <Compile Include="Assets\Assets - Copy\WallMovement.cs" />
      <Compile Include="Assets\Assets - Copy\hitTrigger.cs" />
-     <Compile Include="Assets\ButtonControl.cs" />
+     <Compile Include="Assets\MainMenu.cs" />
      <Compile Include="Assets\Rotation.cs" />
      <Compile Include="Assets\Rotation2.cs" />
  <Reference Include="Assembly-UnityScript-firstpass">
