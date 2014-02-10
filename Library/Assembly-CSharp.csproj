@@ -56,6 +56,8 @@
      <Compile Include="Assets\Rotation2.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{5FA5B07F-A9EA-8795-B7F6-881A937FECEB}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
     <ProjectReference Include="Assembly-UnityScript-firstpass.unityproj">
       <Project>{301A726A-4540-1588-C464-90928805A890}</Project>      <Name>Assembly-UnityScript-firstpass</Name>    </ProjectReference>
   </ItemGroup>
