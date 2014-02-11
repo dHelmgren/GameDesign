@@ -3,8 +3,8 @@ using System.Collections;
 
 public class GameController : MonoBehaviour {
 
-	public static GameObject hazard;
-	public static Vector3 spawnValues;
+	public GameObject hazard;
+	public Vector3 spawnValues;
 	public int hazardCount;
 	public float spawnWait;
 	public float startWait;
@@ -97,7 +97,7 @@ public class GameController : MonoBehaviour {
 	{
 		yield return new WaitForSeconds(spawnWait);
 		float lastWaveLoc = 40 + WallMovement.wallSpeed;
-		spawnWall();
+		spawnWall (hazard,spawnValues);
 		while(true)
 		{
 			for (int i = 0;i< hazardCount;i++)
@@ -120,7 +120,7 @@ public class GameController : MonoBehaviour {
 			lastWaveLoc += WallMovement.wallSpeed;
 		}//while
 	}
-	public static void spawnWall(){
+	public static void spawnWall(GameObject hazard, Vector3 spawnValues){
 		for (int j = 0; j <= 3; j += 1) {
 			Vector3 spawnPosition = new Vector3 (spawnValues.x, spawnValues.y, Random.Range (0, 10) * 5 - 25);
 			Quaternion spawnRotation = new Quaternion ();
