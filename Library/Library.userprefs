@@ -1,11 +1,13 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="AssetS\Assets - Copy\GameController.cs">
     <Files>
-      <File FileName="AssetS\Assets - Copy\GameController.cs" Line="114" Column="51" />
-      <File FileName="Assets\Assets - Copy\WallMovement.cs" Line="1" Column="1" />
+      <File FileName="AssetS\Assets - Copy\SpawnByPass.cs" Line="17" Column="2" />
+      <File FileName="AssetS\Assets - Copy\GameController.cs" Line="55" Column="34" />
+      <File FileName="Assets\Assets - Copy\WallMovement.cs" Line="5" Column="36" />
       <File FileName="Assets\Assets - Copy\Rotations.cs" Line="1" Column="1" />
       <File FileName="Assets\test.cs" Line="1" Column="1" />
+      <File FileName="AssetS\Assets - Copy\DestroyByhit.cs" Line="16" Column="4" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
