@@ -14,9 +14,6 @@ public class DestroyByhit : MonoBehaviour {
 		{
 			Destroy(gameObject);
 		}
-		else if (other.tag == "spawnWall") {
-			GameController.spawnWall(hazard, spawnValues);
-		}
 	}
 	
 

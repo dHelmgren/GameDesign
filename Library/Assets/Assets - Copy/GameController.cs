@@ -4,6 +4,7 @@ using System.Collections;
 public class GameController : MonoBehaviour {
 
 	public GameObject hazard;
+	public GameObject spawnPane;
 	public Vector3 spawnValues;
 	public int hazardCount;
 	public float spawnWait;
@@ -50,8 +51,8 @@ public class GameController : MonoBehaviour {
 			}
 		  
 
-		  if (count % 100 == 0) {
-			WallMovement.wallSpeed -= Mathf.Log ((count+.5f)/50000.0f, 2.7182818284f)+8.0f;
+		  if (count % 100 == 0 && WallMovement.wallSpeed <= 17.0) {
+			WallMovement.wallSpeed -= 1.5f;
 				}
 		count++;
 
@@ -97,13 +98,13 @@ public class GameController : MonoBehaviour {
 	{
 		yield return new WaitForSeconds(spawnWait);
 		float lastWaveLoc = 40 + WallMovement.wallSpeed;
-		spawnWall (hazard,spawnValues);
+		spawnWall (spawnPane,hazard,spawnValues);
 		while(true)
 		{
 			for (int i = 0;i< hazardCount;i++)
 			{	
 				//Set the hazard between set spawnValues -z and z, where z is the width of the stage
-				if(wallSpwanAllowed){
+
 
 					
 					yield return new WaitForSeconds(spawnWait);
@@ -113,18 +114,20 @@ public class GameController : MonoBehaviour {
 						Quaternion spawnRotationPick = new Quaternion ();
 						Instantiate (pickups, spawnPositionPick, spawnRotationPick);
 					}
-					wallSpwanAllowed = false;
-				}
+
 				yield return new WaitForSeconds(spawnWait);
 			}//for
 			lastWaveLoc += WallMovement.wallSpeed;
 		}//while
 	}
-	public static void spawnWall(GameObject hazard, Vector3 spawnValues){
-		for (int j = 0; j <= 3; j += 1) {
+	public static void spawnWall(GameObject spawnPane, GameObject hazard, Vector3 spawnValues){
+		for (int j = 0; j <= 1; j += 1) {
 			Vector3 spawnPosition = new Vector3 (spawnValues.x, spawnValues.y, Random.Range (0, 10) * 5 - 25);
 			Quaternion spawnRotation = new Quaternion ();
 			Instantiate (hazard, spawnPosition, spawnRotation);
 		}
+		Vector3 spawnPanePos = new Vector3 (spawnValues.x, spawnValues.y, -40);
+		Quaternion spawnPaneRot = new Quaternion ();
+		Instantiate (spawnPane, spawnPanePos, spawnPaneRot);
 	}
 }
