@@ -1,4 +1,5 @@
 ﻿<Properties>
+<<<<<<< HEAD
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="AssetS\Assets - Copy\GameController.cs">
     <Files>
@@ -9,6 +10,13 @@
       <File FileName="Assets\Assets - Copy\hitTrigger.cs" Line="45" Column="4" />
       <File FileName="Assets\Assets - Copy\Rotations.cs" Line="1" Column="1" />
       <File FileName="Assets\test.cs" Line="55" Column="3" />
+=======
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="AssetS\Assets - Copy\GameController.cs">
+    <Files>
+      <File FileName="AssetS\Assets - Copy\GameController.cs" Line="103" Column="21" />
+      <File FileName="Assets\Assets - Copy\WallMovement.cs" Line="18" Column="22" />
+>>>>>>> 7ac44a283e25de5bc891bdf15b5db2458c68f23a
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
