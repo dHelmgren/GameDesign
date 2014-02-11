@@ -3,13 +3,15 @@ using System.Collections;
 
 public class GameController : MonoBehaviour {
 
-	public GameObject hazard;
-	public Vector3 spawnValues;
+	public static GameObject hazard;
+	public static Vector3 spawnValues;
 	public int hazardCount;
 	public float spawnWait;
 	public float startWait;
 	public GameObject pickups;
 	public Vector3 spawnValuesPick;
+	public bool wallSpwanAllowed = true;
+
 	public static float timer;
 	public static bool timeStarted = false;
 
@@ -94,33 +96,35 @@ public class GameController : MonoBehaviour {
 	IEnumerator SpawnWaves()
 	{
 		yield return new WaitForSeconds(spawnWait);
+		float lastWaveLoc = 40 + WallMovement.wallSpeed;
+		spawnWall();
 		while(true)
 		{
 			for (int i = 0;i< hazardCount;i++)
 			{	
 				//Set the hazard between set spawnValues -z and z, where z is the width of the stage
-				/*Vector3 spawnPosition = new Vector3 (spawnValues.x, spawnValues.y, Random.Range (-spawnValues.z, spawnValues.z));
-Quaternion spawnRotation = new Quaternion ();
-Instantiate (hazard, spawnPosition, spawnRotation);*/
-				//int negWall = Random.Range(0,10);
-				for(int j = 0; j <= 3; j += 1)
-				{
-					spawnWall (Random.Range (0,10)*5 - 25);
-				}
-				yield return new WaitForSeconds(spawnWait);
-				if(i%2 == 0)
-				{
-					Vector3 spawnPositionPick = new Vector3 (spawnValuesPick.x, spawnValuesPick.y, Random.Range (-spawnValuesPick.z, spawnValuesPick.z));
-					Quaternion spawnRotationPick = new Quaternion ();
-					Instantiate (pickups, spawnPositionPick, spawnRotationPick);
+				if(wallSpwanAllowed){
+
+					
+					yield return new WaitForSeconds(spawnWait);
+					if(i%2 == 0)
+					{
+						Vector3 spawnPositionPick = new Vector3 (spawnValuesPick.x, spawnValuesPick.y, Random.Range (-spawnValuesPick.z, spawnValuesPick.z));
+						Quaternion spawnRotationPick = new Quaternion ();
+						Instantiate (pickups, spawnPositionPick, spawnRotationPick);
+					}
+					wallSpwanAllowed = false;
 				}
 				yield return new WaitForSeconds(spawnWait);
 			}//for
+			lastWaveLoc += WallMovement.wallSpeed;
 		}//while
 	}
-	void spawnWall(float zLoc){
-		Vector3 spawnPosition = new Vector3 (spawnValues.x, spawnValues.y, zLoc);
-		Quaternion spawnRotation = new Quaternion ();
-		Instantiate (hazard, spawnPosition, spawnRotation);
+	public static void spawnWall(){
+		for (int j = 0; j <= 3; j += 1) {
+			Vector3 spawnPosition = new Vector3 (spawnValues.x, spawnValues.y, Random.Range (0, 10) * 5 - 25);
+			Quaternion spawnRotation = new Quaternion ();
+			Instantiate (hazard, spawnPosition, spawnRotation);
+		}
 	}
 }
