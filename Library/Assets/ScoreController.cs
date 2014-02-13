@@ -26,7 +26,7 @@ public class ScoreController : MonoBehaviour {
 	{
 		// Make the first button. If it is pressed, Application.Loadlevel (1) will be executed
 		if(GUI.Button(new Rect(100,540,120,50), "Play Again")) {
-			Application.LoadLevel("sceneballsmove");
+			Application.LoadLevel("itsdoingthingsilike");
 		}
 
 		// Make the second button.

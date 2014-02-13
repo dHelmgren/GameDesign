@@ -19,20 +19,20 @@ public class MainMenu : MonoBehaviour {
 		// Make the first button. If it is pressed, Application.Loadlevel (1) will be executed
 		if(GUI.Button(new Rect(100,540,120,50), "Start Game")) {
 			GameController.isNuxMode = false;
-			Application.LoadLevel("sceneballsmove");
+			Application.LoadLevel("itsdoingthingsilike");
 		}
 
 		// Make the second button.
 		if(GUI.Button(new Rect(260,540,120,50), "How to Play")) {
-			GameController.isNuxMode = true;
 			Application.LoadLevel("DemoControl");
+
 		}
 		
 		// Make the second button.
 		if(GUI.Button(new Rect(420,540,120,50), "Play Nux Mode")) {
 			//set the nux mode boolean to true
-			
-			Application.LoadLevel("sceneballsmove");
+
+			Application.LoadLevel("nuxMode");
 		}
 		
 		if(GUI.Button(new Rect(580,540,120,50), "Game Credits")) {

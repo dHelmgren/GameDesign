@@ -7,7 +7,7 @@ public class Rotations : MonoBehaviour {
 	 public float speed = 10.0f;
 	int move = 0;
 	public bool movement = false;
-	public bool clockWise = false;
+	public bool clockWise = true;
 	public bool washit = false;
 	void Update()
 	{
